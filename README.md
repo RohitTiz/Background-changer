@@ -1,12 +1,71 @@
-# React + Vite
+# React Background Color Changer 🎨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Screenshot](./screenshot.png) *(Upload a screenshot later)*
 
-Currently, two official plugins are available:
+A beginner-friendly React application that demonstrates state management by changing background colors. Perfect for learning React hooks and event handling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Detailed Code Explanation](#detailed-code-explanation)
+- [Core Concepts Learned](#core-concepts-learned)
+- [Installation](#installation)
+- [Running the App](#running-the-app)
+- [Customization](#customization)
+- [FAQ](#faq)
+- [Resources](#resources)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features ✨
+- Interactive color changing with single click
+- Responsive design that works on all devices
+- Smooth color transitions
+- Minimal and clean codebase
+- Uses React hooks (useState)
+- Styled with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How It Works 🔧
+The app maintains a single state variable (`color`) that determines the background color. When you click any color button:
+1. The `onClick` handler updates the state
+2. React re-renders the component
+3. The background color changes instantly
+
+## Detailed Code Explanation 💻
+color: Stores current background color (initial value "olive")
+
+setColor: Function to update the color state
+
+useState: React hook that enables state in functional components
+2. Dynamic Background
+jsx
+<div className='w-full h-screen duration-200' style={{backgroundColor: color}}>
+w-full h-screen: Tailwind classes for full width/height
+
+duration-200: Adds smooth transition
+
+style: Inline style that uses the current color state
+3. Color Buttons
+jsx
+<button 
+  onClick={() => setColor("red")}
+  className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+  style={{backgroundColor: "red"}}>
+  Red
+</button>
+onClick: Updates state to corresponding color
+
+Tailwind classes for styling (padding, rounded corners, etc.)
+
+Inline style sets button's background color
+
+Core Concepts Learned 🧠
+✔ React Components - Building UI with functions
+✔ State Management - Using useState hook
+✔ Event Handling - onClick events
+✔ Dynamic Styling - Inline styles in JSX
+✔ Tailwind CSS - Utility-first styling
+✔ Component Re-rendering - How state changes update UI
+
+### 1. State Management
+```jsx
+const [color, setColor] = useState("olive");

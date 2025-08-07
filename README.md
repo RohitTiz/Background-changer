@@ -1,6 +1,6 @@
 # React Background Color Changer 🎨
 
-![Project Screenshot](./screenshot.png) *(Upload a screenshot later)*
+
 
 A beginner-friendly React application that demonstrates state management by changing background colors. Perfect for learning React hooks and event handling.
 
